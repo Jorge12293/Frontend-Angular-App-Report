@@ -1,0 +1,63 @@
+<div class="card mt-1 mb-2">
+    <div class="d-flex justify-content-around flex-wrap">
+      <app-container-graph-pie
+        [title]="'VENTAS POR PLATAFORM'"
+        [pieChartDatasets]="pieChartDatasetsPlatform"
+        [pieChartLabels]="pieChartLabelsPlatform"
+        [chartWidth]="400"
+        [chartHeight]="300">
+      </app-container-graph-pie>
+
+      <app-container-graph-pie
+        [title]="'VENTAS POR  SEGMENTACION'"
+        [pieChartDatasets]="pieChartDatasetsSegmentation"
+        [pieChartLabels]="pieChartLabelsSegmentation"
+        [chartWidth]="400"
+        [chartHeight]="300">
+      </app-container-graph-pie>
+
+      <app-container-graph-bar
+        [title]="'Grafico Definir'"
+        [barChartData]="barChartDataForCanal"
+        [chartWidth]="400"
+        [chartHeight]="310">
+      </app-container-graph-bar>
+
+
+ <!-- 
+        <app-container-graph-pie
+        [title]="'Grafico Definir'">
+      </app-container-graph-pie>
+  
+          <app-container-graph-pie
+        [title]="'Grafico Definir'">
+      </app-container-graph-pie>
+
+  <app-container-graph-bar
+    [title]="'Grafico Definir'">
+  </app-container-graph-bar>
+  
+
+<app-container-graph-bar
+[title]="'Grafico Definir'">
+</app-container-graph-bar>
+
+        <app-container-graph-pie
+          [title]="'Grafico Definir'">
+        </app-container-graph-pie>
+
+        <app-container-graph-doughnut
+          [title]="'Grafico Definir'">
+        </app-container-graph-doughnut>
+      
+        <app-container-graph-pie
+        [title]="'Grafico Definir'">
+      </app-container-graph-pie>
+        
+        <app-container-graph-doughnut
+          [title]="'Grafico Definir'">
+        </app-container-graph-doughnut> -->
+
+
+    </div>
+</div>

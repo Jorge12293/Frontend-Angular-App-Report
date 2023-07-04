@@ -1,0 +1,39 @@
+
+<div class="container-fluid">
+
+    <div class="accordion" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+              Filtrar Informacion
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+                <div class="d-flex justify-content-around flex-wrap">
+                    <app-container-options-checkbox
+                      [title]="'Lista Empresas'"
+                      [listItem]="listItemCheckCompanies"
+                      (actionListItemCheck)="actionListItemCheck()">
+                    </app-container-options-checkbox>
+
+                    <app-container-options-checkbox
+                      [title]="'Lista Ciudad'"
+                      [listItem]="listItemCheckCities"
+                      (actionListItemCheck)="actionListItemCheck()">  
+                    </app-container-options-checkbox>
+
+                    <app-container-options-checkbox
+                      [title]="'Lista Tipo Vehiculo'"
+                      [listItem]="listItemCheckCatsCar"
+                      (actionListItemCheck)="actionListItemCheck()">
+                    </app-container-options-checkbox>
+
+                  </div>
+            </div>
+          </div>
+        </div>
+    </div>
+    
+    <app-container-graphs></app-container-graphs>
+</div>

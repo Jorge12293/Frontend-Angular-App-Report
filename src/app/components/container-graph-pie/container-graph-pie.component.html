@@ -1,0 +1,14 @@
+<div class="card m-2 p-2">
+  <p class="text-center">{{title}}</p>
+  <canvas baseChart
+    [type]="'pie'"
+    [datasets]="pieChartDatasets"
+    [labels]="pieChartLabels"
+    [options]="pieChartOptions"
+    [plugins]="pieChartPlugins"
+    [legend]="pieChartLegend"
+    [width]="chartWidth"
+    [height]="chartHeight">
+  </canvas>
+</div>
+

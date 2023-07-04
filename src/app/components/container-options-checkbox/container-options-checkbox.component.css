@@ -1,0 +1,16 @@
+.card{
+    width: 350px;
+}
+
+.container-name{
+    max-height: 170px; 
+    overflow: auto;
+}
+.card-body {
+    padding: 0rem;
+}
+
+hr, p {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}

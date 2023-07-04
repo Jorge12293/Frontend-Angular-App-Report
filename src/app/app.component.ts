@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'web-app-report';
+  // apiUrl: string;
+  // title = 'web-app-report';
+
+  constructor() {
+    // this.apiUrl = environment.apiUrl;
+    // console.log(this.apiUrl);
+  }
+  
 }

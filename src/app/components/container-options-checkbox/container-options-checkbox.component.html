@@ -1,0 +1,25 @@
+
+<div class="card mb-2 mt-2 p-2">
+    <div class="card-body text-center">
+        <p>{{title}}</p>
+        <hr>
+        <div class="d-flex justify-content-between">
+            <strong> Marcar todos </strong>
+            <input 
+                type="checkbox" 
+                [(ngModel)]="selectAll"
+                (ngModelChange)="onItemChange()"> 
+        </div>
+        <hr>
+        <div class="container-name">
+            <div *ngFor="let item of listItem" class="d-flex justify-content-between">
+                <small>{{item.name}}</small> 
+                <input 
+                    type="checkbox" 
+                    [(ngModel)]="item.checked"
+                    (ngModelChange)="onItemChange()">  
+            </div>
+        </div>
+    </div>
+</div>
+
