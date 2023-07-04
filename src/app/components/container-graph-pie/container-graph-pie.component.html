@@ -2,8 +2,8 @@
   <p class="text-center">{{title}}</p>
   <canvas baseChart
     [type]="'pie'"
-    [datasets]="pieChartDatasets"
-    [labels]="pieChartLabels"
+    [labels]="chartGraphValues.chartLabels"
+    [datasets]="chartGraphValues.chartDatasets"
     [options]="pieChartOptions"
     [plugins]="pieChartPlugins"
     [legend]="pieChartLegend"
@@ -11,4 +11,5 @@
     [height]="chartHeight">
   </canvas>
 </div>
+
 

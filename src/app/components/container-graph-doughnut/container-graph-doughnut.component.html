@@ -1,10 +1,14 @@
 <div class="card m-2 p-2">
-        <p>{{title}}</p>
+        <p class="text-center">{{title}}</p>
         <canvas baseChart
-                [labels]="doughnutChartLabels"
-                [datasets]="doughnutChartDatasets"
+                [labels]="chartGraphValues.chartLabels"
+                [datasets]="chartGraphValues.chartDatasets"
                 [options]="doughnutChartOptions"
                 [legend]="true"
-                [type]="'doughnut'">
+                [type]="'doughnut'"
+                [width]="chartWidth"
+                [height]="chartHeight">
         </canvas>
+        
+        
 </div>

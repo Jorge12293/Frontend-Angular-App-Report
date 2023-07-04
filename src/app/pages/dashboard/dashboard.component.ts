@@ -60,7 +60,7 @@ export class DashboardComponent {
     this.listItemCheckCatsCarSelect   = this.listItemCheckCatsCar.filter(element=>element.checked);
     
     this.listReportFilter=[];
-    if(this.listItemCheckCompaniesSelect.length>0 || this.listItemCheckCitiesSelect.length>0 || this.listItemCheckCatsCarSelect.length>0){
+    if(this.listItemCheckCompaniesSelect.length > 0 || this.listItemCheckCitiesSelect.length > 0 || this.listItemCheckCatsCarSelect.length>0){
       this.listReport.forEach(element=>{
         const hasNomEmpresa =  this.listItemCheckCompaniesSelect.some(e => e.name === element.conNomEmpresa);
         const hasNomCiudad =  this.listItemCheckCitiesSelect.some(e => e.name === element.conNomCiudad);

@@ -1,63 +1,40 @@
-<div class="card mt-1 mb-2">
+<div class="card mt-1 mb-2 bg-dark">
     <div class="d-flex justify-content-around flex-wrap">
+
       <app-container-graph-pie
-        [title]="'VENTAS POR PLATAFORM'"
-        [pieChartDatasets]="pieChartDatasetsPlatform"
-        [pieChartLabels]="pieChartLabelsPlatform"
+        [title]="'VENTAS DETAL POR PLATAFORMA'"
+        [chartGraphValues]="pieChartGraphValuesPlatform"
         [chartWidth]="400"
         [chartHeight]="300">
       </app-container-graph-pie>
 
+      <app-container-graph-doughnut
+          [title]="'VENTAS DETAL POR CALIDAD'"
+          [chartWidth]="400"
+          [chartHeight]="300"
+          [chartGraphValues]="doughnutChartGraphValuesQuality">
+      </app-container-graph-doughnut>
+
       <app-container-graph-pie
-        [title]="'VENTAS POR  SEGMENTACION'"
-        [pieChartDatasets]="pieChartDatasetsSegmentation"
-        [pieChartLabels]="pieChartLabelsSegmentation"
+        [title]="'VENTAS DETAL POR PROCEDENCIA DE LEDS'"
+        [chartGraphValues]="pieChartGraphValuesSegmentation"
         [chartWidth]="400"
         [chartHeight]="300">
       </app-container-graph-pie>
 
       <app-container-graph-bar
-        [title]="'Grafico Definir'"
+        [title]="'VENTAS DETAL POR CANAL'"
         [barChartData]="barChartDataForCanal"
-        [chartWidth]="400"
+        [chartWidth]="600"
         [chartHeight]="310">
       </app-container-graph-bar>
 
-
- <!-- 
-        <app-container-graph-pie
-        [title]="'Grafico Definir'">
-      </app-container-graph-pie>
-  
-          <app-container-graph-pie
-        [title]="'Grafico Definir'">
-      </app-container-graph-pie>
-
-  <app-container-graph-bar
-    [title]="'Grafico Definir'">
-  </app-container-graph-bar>
-  
-
-<app-container-graph-bar
-[title]="'Grafico Definir'">
-</app-container-graph-bar>
-
-        <app-container-graph-pie
-          [title]="'Grafico Definir'">
-        </app-container-graph-pie>
-
-        <app-container-graph-doughnut
-          [title]="'Grafico Definir'">
-        </app-container-graph-doughnut>
-      
-        <app-container-graph-pie
-        [title]="'Grafico Definir'">
-      </app-container-graph-pie>
-        
-        <app-container-graph-doughnut
-          [title]="'Grafico Definir'">
-        </app-container-graph-doughnut> -->
-
+      <app-container-graph-bar
+        [title]="'VENTAS DETAL POR MEDIO'"
+        [barChartData]="barChartDataForMedio"
+        [chartWidth]="600"
+        [chartHeight]="310">
+      </app-container-graph-bar>
 
     </div>
 </div>

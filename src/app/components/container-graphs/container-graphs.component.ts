@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { Report } from 'src/app/models/report.class';
-import { getGraphByCanal, getGraphByPlatform, getGraphBySegmentation } from 'src/app/helpers/graph-methods';
+import { getGraphByCanal, getGraphByMedio, getGraphByPlatform, getGraphByQuality, getGraphBySegmentation, getGraphDataBar } from 'src/app/helpers/graph-methods';
 import { ChartConfiguration } from 'chart.js';
+import { Graph } from 'src/app/interfaces/graph';
+import { ChartGraphValues } from 'src/app/interfaces/chart-graph-values';
+import { getChartGraphValues } from '../../helpers/graph-methods';
 
 
 @Component({
@@ -11,42 +14,31 @@ import { ChartConfiguration } from 'chart.js';
 })
 export class ContainerGraphsComponent {
 
-  pieChartLabelsPlatform :any[]=[];
-  pieChartDatasetsPlatform : any []=[];
+  // Variables Graphs Doughnut
+  doughnutChartGraphValuesQuality: ChartGraphValues = new ChartGraphValues();
   
-  pieChartLabelsSegmentation :any[]=[];
-  pieChartDatasetsSegmentation : any []=[];
-  
-  barChartDataForCanal: ChartConfiguration<'bar'>['data'] = { labels: [], datasets: [] }
+  // Variables Graphs Pies
+  pieChartGraphValuesPlatform: ChartGraphValues = new ChartGraphValues();
+  pieChartGraphValuesSegmentation: ChartGraphValues = new ChartGraphValues();
 
+  // Variables Graphs Bars
+  barChartDataForCanal: ChartConfiguration<'bar'>['data'] = { labels: [], datasets: [] }
+  barChartDataForMedio: ChartConfiguration<'bar'>['data'] = { labels: [], datasets: [] }
+
+  
   // Load data Graphs
   handleUpdateGraphs(listReportFilter: Report[] ) {
 
-    let graphPlatformFilter = getGraphByPlatform(listReportFilter);
-    this.pieChartLabelsPlatform = graphPlatformFilter?.labels ?? [];
-    this.pieChartDatasetsPlatform = [ { data:  graphPlatformFilter?.values ?? []}];
-  
-    let graphSegmentationFilter = getGraphBySegmentation(listReportFilter);
-    this.pieChartLabelsSegmentation = graphSegmentationFilter?.labels ?? [];
-    this.pieChartDatasetsSegmentation = [ { data: graphSegmentationFilter?.values ?? []}];
+    this.doughnutChartGraphValuesQuality = getChartGraphValues(getGraphByQuality(listReportFilter));
 
-    let graphCanalFilter = getGraphByCanal(listReportFilter);
-    this.barChartDataForCanal = {
-      labels: graphCanalFilter?.labels ?? [], 
-      datasets: [
-        {
-          label: graphCanalFilter?.label, 
-          data: graphCanalFilter?.values ?? [],
-          backgroundColor: graphCanalFilter?.colors ?? [],
-          borderWidth: 1,
-        }
-      ]
-    };
+    this.pieChartGraphValuesPlatform = getChartGraphValues(getGraphByPlatform(listReportFilter));
+    this.pieChartGraphValuesSegmentation = getChartGraphValues(getGraphBySegmentation(listReportFilter));
 
-
-
+    this.barChartDataForCanal = getGraphDataBar(getGraphByCanal(listReportFilter));
+    this.barChartDataForMedio = getGraphDataBar(getGraphByMedio(listReportFilter));
   }
 
 
 
 }
+

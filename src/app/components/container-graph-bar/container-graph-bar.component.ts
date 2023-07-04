@@ -19,41 +19,4 @@ export class ContainerGraphBarComponent {
     indexAxis: "x",
   };
 
-  // public barChartData: ChartConfiguration<'bar'>['data'] = {
-  //   labels: [ 
-  //     '2006', 
-  //     '2007', 
-  //     '2009',
-  //     '2001', 
-  //     '2002', 
-  //     '2003', 
-  //     '2004', 
-  //     '2005', 
-  //     '2011',  
-  //   ],
-  //   datasets: [
-  //     { 
-  //       data: [ 65, 59, 80,65, 59, 80 ],
-  //       label: 'Canal', 
-  //       backgroundColor: [
-  //         this.generateRandomColor(),    // Color para el año 2006
-  //         this.generateRandomColor(),   
-  //         this.generateRandomColor(),   
-  //         this.generateRandomColor(),    // Color para el año 2006
-  //         this.generateRandomColor(),   
-  //         this.generateRandomColor(),   
-  //         this.generateRandomColor(),    // Color para el año 2006
-  //         this.generateRandomColor(),   
-  //         this.generateRandomColor(),   
-  //       ],
-  //       borderWidth: 1
-  //     },
-  //   ]
-  // };
-
-
-
-
-
-
 }
