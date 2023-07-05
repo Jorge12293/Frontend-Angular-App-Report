@@ -3,7 +3,7 @@
 }
 
 .container-name{
-    max-height: 170px; 
+    max-height: 150px; 
     overflow: auto;
 }
 .card-body {

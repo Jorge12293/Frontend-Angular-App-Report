@@ -8,7 +8,7 @@ import { generateRandomColor } from './colors-methods';
 
 export const getGraphByQuality = (listReport: Report[]): Graph => {
   const graph: Graph = {
-    label: 'Plataforma',
+    label: 'Calidad',
     labels: [],
     values: [],
     colors: [],

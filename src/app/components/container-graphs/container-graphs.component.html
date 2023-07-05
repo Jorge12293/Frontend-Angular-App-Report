@@ -1,40 +1,45 @@
-<div class="card mt-1 mb-2 bg-dark">
-    <div class="d-flex justify-content-around flex-wrap">
-
-      <app-container-graph-pie
-        [title]="'VENTAS DETAL POR PLATAFORMA'"
-        [chartGraphValues]="pieChartGraphValuesPlatform"
-        [chartWidth]="400"
-        [chartHeight]="300">
-      </app-container-graph-pie>
-
-      <app-container-graph-doughnut
-          [title]="'VENTAS DETAL POR CALIDAD'"
+<div class="mt-1 mb-4">
+    <div class="card pt-2 pb-2 bg-dark">
+      <div class="d-flex justify-content-around flex-wrap">
+        <app-container-graph-pie
+          [title]="'VENTAS DETAL POR PLATAFORMA'"
+          [chartGraphValues]="pieChartGraphValuesPlatform"
           [chartWidth]="400"
-          [chartHeight]="300"
-          [chartGraphValues]="doughnutChartGraphValuesQuality">
-      </app-container-graph-doughnut>
+          [chartHeight]="200">
+        </app-container-graph-pie>
+  
+        <app-container-graph-doughnut
+            [title]="'VENTAS DETAL POR CALIDAD'"
+            [chartWidth]="400"
+            [chartHeight]="200"
+            [chartGraphValues]="doughnutChartGraphValuesQuality">
+        </app-container-graph-doughnut>
+  
+        <app-container-graph-pie
+          [title]="'VENTAS DETAL POR PROCEDENCIA DE LEDS'"
+          [chartGraphValues]="pieChartGraphValuesSegmentation"
+          [chartWidth]="400"
+          [chartHeight]="200">
+        </app-container-graph-pie>
+      </div>
+    </div>
+    <hr>
 
-      <app-container-graph-pie
-        [title]="'VENTAS DETAL POR PROCEDENCIA DE LEDS'"
-        [chartGraphValues]="pieChartGraphValuesSegmentation"
-        [chartWidth]="400"
-        [chartHeight]="300">
-      </app-container-graph-pie>
-
-      <app-container-graph-bar
-        [title]="'VENTAS DETAL POR CANAL'"
-        [barChartData]="barChartDataForCanal"
-        [chartWidth]="600"
-        [chartHeight]="310">
-      </app-container-graph-bar>
-
-      <app-container-graph-bar
-        [title]="'VENTAS DETAL POR MEDIO'"
-        [barChartData]="barChartDataForMedio"
-        [chartWidth]="600"
-        [chartHeight]="310">
-      </app-container-graph-bar>
-
+    <div class="card pt-2 pb-2 bg-dark">
+      <div class="d-flex justify-content-around flex-wrap bg-dark">
+        <app-container-graph-bar
+          [title]="'VENTAS DETAL POR CANAL'"
+          [barChartData]="barChartDataForCanal"
+          [chartWidth]="600"
+          [chartHeight]="250">
+        </app-container-graph-bar>
+  
+        <app-container-graph-bar
+          [title]="'VENTAS DETAL POR MEDIO'"
+          [barChartData]="barChartDataForMedio"
+          [chartWidth]="600"
+          [chartHeight]="250">
+        </app-container-graph-bar>
+      </div>
     </div>
 </div>
